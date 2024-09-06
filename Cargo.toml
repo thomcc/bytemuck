@@ -39,15 +39,6 @@ const_zeroed = [] # MSRV 1.75.0: support const `zeroed()`
 # Do not use if you can avoid it, because this is **unsound**!!!!
 unsound_ptr_pod_impl = []
 
-# NOT SEMVER SUPPORTED! TEMPORARY ONLY!
-nightly_portable_simd = []
-nightly_stdsimd = []
-# Enable `f16` and `f128`
-nightly_float = []
-
-# Improved documentation using the nightly toolchain
-nightly_docs = []
-
 # Enables all features that are both sound and supported on the latest stable
 # version of Rust, with the exception of `extern_crate_alloc` and
 # `extern_crate_std`.
@@ -64,6 +55,15 @@ latest_stable_rust = [
   "zeroable_atomics",
   "zeroable_maybe_uninit",
 ]
+
+# NOT SEMVER SUPPORTED! TEMPORARY ONLY!
+nightly_portable_simd = []
+nightly_stdsimd = []
+# Enable `f16` and `f128`
+nightly_float = []
+
+# Improved documentation using the nightly toolchain
+nightly_docs = []
 
 [dependencies]
 bytemuck_derive = { version = "1.4", path = "derive", optional = true }
