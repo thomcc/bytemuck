@@ -75,27 +75,15 @@ unexpected_cfgs = { level = "deny", check-cfg = ['cfg(target_arch, values("spirv
 # Note(Lokathor): Don't use all-features or it would use `unsound_ptr_pod_impl` too.
 features = [
   "nightly_docs",
-  "derive",
+  "latest_stable_rust",
   "extern_crate_alloc",
   "extern_crate_std",
-  "zeroable_maybe_uninit",
-  "zeroable_atomics",
-  "min_const_generics",
-  "wasm_simd",
-  "must_cast",
-  "const_zeroed",
 ]
 
 [package.metadata.playground]
 # Note(Lokathor): Don't use all-features or it would use `unsound_ptr_pod_impl` too.
 features = [
-  "derive",
+  "latest_stable_rust",
   "extern_crate_alloc",
   "extern_crate_std",
-  "zeroable_maybe_uninit",
-  "zeroable_atomics",
-  "min_const_generics",
-  "wasm_simd",
-  "must_cast",
-  "const_zeroed",
 ]
